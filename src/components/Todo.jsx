@@ -1,4 +1,4 @@
-export default function Todo({ todo, handleSetDone }) {
+export default function Todo({ todo, handleSetDone, handleDeleteTodo }) {
   return (
     <div className="flex justify-center">
       <div className="w-1/2  m-3 bg-slate-300">
@@ -10,11 +10,13 @@ export default function Todo({ todo, handleSetDone }) {
               checked={todo.done}
             />
           </div>
+          {/*проверка done -> меняеем стили у todo*/}
           <div className={todo.done ? 'text-slate-400' : ''}>
             <p>{todo.text}</p>
           </div>
         </div>
       </div>
+      <button onClick={() => handleDeleteTodo(todo.id)}>Удалить</button>
     </div>
   )
 }
