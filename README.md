@@ -12,4 +12,4 @@
  - Оптимизация под большое кол-во Todo
  - Анимации
  ---
-![profile](public/profile.PNG)
+![profile](public/profile.gif)

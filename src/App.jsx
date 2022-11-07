@@ -11,6 +11,7 @@ import Todo from './components/Todo'
 export default function App() {
   const [state, setState] = useState('')
   const [todos, setTodos] = useState([])
+
   //сетим состояние Input text
   const handleSetState = (e) => {
     setState(e.target.value)
@@ -55,9 +56,9 @@ export default function App() {
       {todos.map((todo) => (
         <Todo
           handleSetDone={handleSetDone}
+          handleDeleteTodo={handleDeleteTodo}
           todo={todo}
           key={todo.id}
-          handleDeleteTodo={handleDeleteTodo}
         />
       ))}
     </>
